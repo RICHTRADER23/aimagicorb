@@ -23,6 +23,9 @@ body {
     flex-direction: column;
     align-items: center; /* Центрируем элементы по горизонтали */
     justify-content: center; /* Центрируем элементы по вертикали */
+
+    /* Добавляем отступ снизу, чтобы история была оторвана от низа страницы */
+    padding-bottom: 50px;  
 }
 
 #magic-ball {
@@ -117,7 +120,7 @@ button:hover {
 }
 
 .history {
-    margin: 30px auto;  /* Центрируем историю по горизонтали */
+    margin: 30px auto;  /* Центрируем историю по горизонтали и даём отступы сверху */
     max-width: 400px;
     text-align: left;
     color: #ffffff;
@@ -127,6 +130,8 @@ button:hover {
     box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
     max-height: 300px; /* Ограничиваем максимальную высоту */
     overflow-y: auto;  /* Добавляем вертикальную прокрутку */
+    position: relative;  /* Используем относительное позиционирование для отрыва от низа */
+    bottom: auto;  /* Отменяем привязку к нижнему краю */
 }
 
 #history-container {
