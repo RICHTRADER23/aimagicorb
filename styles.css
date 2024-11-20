@@ -1,0 +1,192 @@
+/* styles.css */
+body {
+    background-color: #000;
+    background-image: url('sky-texture2.jpg');
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'PT Serif', serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto; /* Заменить 'auto' на '0 auto' для полного центрирования */
+    padding: 20px;
+    display: flex; /* Используем Flexbox для выравнивания */
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center; /* Центрируем элементы по вертикали */
+}
+
+#magic-ball {
+    margin: 20px auto; /* Центрируем шарик */
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex; /* Используем Flexbox */
+    align-items: center;
+    justify-content: center;
+}
+
+.ball {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff66cc, #330033, #0099ff, #330033);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 102, 204, 0.6), 0 0 50px rgba(0, 153, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.screen {
+    background: rgba(17, 17, 17, 0.9);
+    border: 2px solid #00aaff;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 20px;
+    color: #00eaff; /* Неоново-голубой цвет текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+    animation: screenGlow 1s ease-in-out alternate infinite;
+    text-align: center;
+}
+
+@keyframes screenGlow {
+    0% { box-shadow: 0 0 10px #00aaff; }
+    100% { box-shadow: 0 0 20px #00aaff; }
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #0088cc;
+}
+
+/* Добавление анимации вращения для шара */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ball.spin {
+    animation: spin 2s ease-in-out;
+}
+
+.history {
+    margin: 30px auto;  /* Центрируем историю по горизонтали */
+    max-width: 400px;
+    text-align: left;
+    color: #ffffff;
+    background: rgba(17, 17, 17, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
+    max-height: 300px; /* Ограничиваем максимальную высоту */
+    overflow-y: auto;  /* Добавляем вертикальную прокрутку */
+}
+
+#history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Центрируем по горизонтали */
+    justify-content: center;  /* Центрируем по вертикали (если нужно) */
+    margin: 0 auto;  /* Центрируем контейнер истории */
+    width: 80%;  /* Или укажи нужное значение для ширины */
+}
+
+.history h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#history-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(34, 34, 34, 0.9);
+    border-left: 4px solid #00aaff;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 3em;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 40px #00eaff;
+    background: linear-gradient(45deg, #00aaff, #00eaff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Анимация для мягкого свечения текста */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 40px #00eaff;
+    }
+    100% {
+        text-shadow: 0 0 20px #00aaff, 0 0 30px #00eaff, 0 0 60px #ff00ff;
+    }
+}
+
+input[type="text"],
+button {
+    margin: 10px auto; /* Центрируем поля ввода и кнопки */
+    display: block;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, input[type="text"], button, .screen, #answer {
+    font-family: 'PT Serif', serif;
+}
