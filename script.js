@@ -1,11 +1,12 @@
 document.getElementById("ask-button").addEventListener("click", function() {
-    const question = document.getElementById("question").value.trim();
+    const questionInput = document.getElementById("question"); // Объявляем переменную
+    const question = questionInput.value.trim();
     
     if (question === "") {
         alert("Пожалуйста, введи свой вопрос.");
         return;
     }
-     
+
     // Очищаем поле ввода
     questionInput.value = "";
 
@@ -91,5 +92,5 @@ if ('serviceWorker' in navigator) {
           console.log('Ошибка регистрации Service Worker:', error);
         });
     });
-  }
+}
   
