@@ -5,6 +5,9 @@ document.getElementById("ask-button").addEventListener("click", function() {
         alert("Пожалуйста, введи свой вопрос.");
         return;
     }
+     
+    // Очищаем поле ввода
+    questionInput.value = "";
 
     // Запускаем звук
     const magicSound = document.getElementById("magic-sound");
