@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Шар Судьбы</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="manifest" href="manifest.json">
+    </head>
+    
+ <body>
+    <!-- Основная секция с AI Magic Orb -->
+    <main>
+        <div class="container">
+            <h1>Шар Судьбы</h1>
+            <!-- Шар и текстовое поле -->
+            <div id="magic-ball">
+                <div class="ball">
+                    <div class="screen">
+                        <p id="answer">Задай вопрос и встряхни меня!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Поле для ввода вопроса и кнопка -->
+            <input type="text" id="question" placeholder="Введи свой вопрос здесь...">
+            <button id="ask-button">Спросить</button>
+        </div>
+        <!-- История вопросов -->
+        <div id="history" class="history">
+            <h2>История вопросов</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <audio id="magic-sound" src="magic_sound.wav" preload="auto"></audio>
+ </body>
+</html>
